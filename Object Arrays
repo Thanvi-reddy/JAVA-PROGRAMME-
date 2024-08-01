@@ -1,0 +1,37 @@
+// Define the Product class
+public class Product {
+    // Attributes
+    String name;
+    double price;
+
+    // Constructor
+    public Product(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    // Method to display product details
+    public void displayInfo() {
+        System.out.println("Product Name: " + name);
+        System.out.println("Price: $" + price);
+    }
+}
+
+// Main class to test array of Product objects
+public class Main {
+    public static void main(String[] args) {
+        // Create an array of Product objects
+        Product[] products = new Product[3];
+        
+        // Initialize Product objects
+        products[0] = new Product("Laptop", 899.99);
+        products[1] = new Product("Smartphone", 499.99);
+        products[2] = new Product("Headphones", 79.99);
+        
+        // Display information for each product
+        for (Product product : products) {
+            product.displayInfo();
+            System.out.println(); // New line for separation
+        }
+    }
+}
