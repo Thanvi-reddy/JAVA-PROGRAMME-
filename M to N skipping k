@@ -1,0 +1,9 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int m = 50,n = 100;
+        int k = 7;
+        for(int i = m;i<=n;i=i+k+1){
+            System.out.println(i);
+        }
+    }
+}
