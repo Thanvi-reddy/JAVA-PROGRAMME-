@@ -1,0 +1,38 @@
+// Define the Animal class (superclass)
+public class Animal {
+    // Method to make a sound
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+// Define the Dog class (subclass)
+public class Dog extends Animal {
+    // Overridden method
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+// Define the Cat class (subclass)
+public class Cat extends Animal {
+    // Overridden method
+    @Override
+    public void makeSound() {
+        System.out.println("Cat meows");
+    }
+}
+
+// Main class to test polymorphism
+public class Main {
+    public static void main(String[] args) {
+        // Create Animal objects
+        Animal myDog = new Dog();
+        Animal myCat = new Cat();
+        
+        // Call overridden methods
+        myDog.makeSound();
+        myCat.makeSound();
+    }
+}
