@@ -1,0 +1,48 @@
+// Define the Vehicle class (superclass)
+public class Vehicle {
+    // Attributes
+    String brand;
+    int year;
+
+    // Constructor
+    public Vehicle(String brand, int year) {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    // Method to display vehicle information
+    public void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Year: " + year);
+    }
+}
+
+// Define the Car class (subclass)
+public class Car extends Vehicle {
+    // Additional attribute
+    int numberOfDoors;
+
+    // Constructor
+    public Car(String brand, int year, int numberOfDoors) {
+        super(brand, year); // Call the superclass constructor
+        this.numberOfDoors = numberOfDoors;
+    }
+
+    // Method to display car information
+    @Override
+    public void displayInfo() {
+        super.displayInfo(); // Call the superclass method
+        System.out.println("Number of Doors: " + numberOfDoors);
+    }
+}
+
+// Main class to test the Car class
+public class Main {
+    public static void main(String[] args) {
+        // Create a Car object
+        Car car1 = new Car("Toyota", 2022, 4);
+        
+        // Display car information
+        car1.displayInfo();
+    }
+}
