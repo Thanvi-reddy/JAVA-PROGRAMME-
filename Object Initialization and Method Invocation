@@ -1,0 +1,38 @@
+// Define the Car class
+public class Car {
+    // Attributes
+    String make;
+    String model;
+    int year;
+
+    // Constructor
+    public Car(String make, String model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Method to start the car
+    public void start() {
+        System.out.println("The car is starting.");
+    }
+
+    // Method to display car details
+    public void displayDetails() {
+        System.out.println("Make: " + make);
+        System.out.println("Model: " + model);
+        System.out.println("Year: " + year);
+    }
+}
+
+// Main class to test the Car class
+public class Main {
+    public static void main(String[] args) {
+        // Create a Car object
+        Car myCar = new Car("Toyota", "Camry", 2023);
+        
+        // Call methods on the Car object
+        myCar.start();
+        myCar.displayDetails();
+    }
+}
