@@ -1,0 +1,50 @@
+// Define the Student class
+public class Student {
+    // Private attributes
+    private String name;
+    private int rollNumber;
+
+    // Constructor
+    public Student(String name, int rollNumber) {
+        this.name = name;
+        this.rollNumber = rollNumber;
+    }
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Setter for name
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter for rollNumber
+    public int getRollNumber() {
+        return rollNumber;
+    }
+
+    // Setter for rollNumber
+    public void setRollNumber(int rollNumber) {
+        this.rollNumber = rollNumber;
+    }
+}
+
+// Main class to test the Student class
+public class Main {
+    public static void main(String[] args) {
+        // Create a Student object
+        Student student1 = new Student("Bob", 101);
+        
+        // Display initial information
+        System.out.println("Name: " + student1.getName());
+        System.out.println("Roll Number: " + student1.getRollNumber());
+        
+        // Update and display new information
+        student1.setName("Robert");
+        student1.setRollNumber(102);
+        System.out.println("Updated Name: " + student1.getName());
+        System.out.println("Updated Roll Number: " + student1.getRollNumber());
+    }
+}
